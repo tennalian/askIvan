@@ -231,6 +231,9 @@
 	var queueIndex = -1;
 
 	function cleanUpNextTick() {
+	    if (!draining || !currentQueue) {
+	        return;
+	    }
 	    draining = false;
 	    if (currentQueue.length) {
 	        queue = currentQueue.concat(queue);
@@ -19847,7 +19850,7 @@
 
 
 	// module
-	exports.push([module.id, "* {\n  -webkit-box-sizing: border-box;\n  -moz-box-sizing: border-box;\n  box-sizing: border-box; }\n\nhtml, body {\n  margin: 0;\n  padding: 0;\n  width: 100%;\n  height: 100%; }\n\n.chat {\n  width: 600px;\n  margin: 50px auto 0;\n  justify-content: center; }\n  .chat__window {\n    margin: 0 0 20px;\n    background: #DEEFF9;\n    border-radius: 4px;\n    padding: 20px; }\n    .chat__window .question {\n      text-align: left;\n      font-size: 20px;\n      margin: 0 0 20px; }\n      .chat__window .question p {\n        display: inline-block;\n        padding: 10px;\n        border-radius: 5px;\n        background: #BBD8F1;\n        margin: 0; }\n    .chat__window .answer {\n      text-align: right; }\n      .chat__window .answer p {\n        font-size: 20px;\n        display: inline-block;\n        padding: 10px;\n        border-radius: 5px;\n        background: #F1C0BB;\n        margin: 0; }\n    .chat__window > p {\n      font-size: 30px;\n      text-align: center;\n      color: grey;\n      margin: 0; }\n  .chat__textarea textarea {\n    margin: 0 0 20px; }\n  .chat .photo {\n    margin: 0 auto 20px;\n    text-align: center; }\n    .chat .photo img {\n      display: block;\n      margin: 0 auto;\n      max-height: 217px; }\n\n.btn {\n  font-size: 30px; }\n", ""]);
+	exports.push([module.id, "* {\n  -webkit-box-sizing: border-box;\n  -moz-box-sizing: border-box;\n  box-sizing: border-box; }\n\nhtml, body {\n  margin: 0;\n  padding: 0;\n  width: 100%;\n  height: 100%; }\n\n.chat {\n  width: 600px;\n  margin: 50px auto;\n  justify-content: center; }\n  .chat__window {\n    margin: 0 0 20px;\n    background: #DEEFF9;\n    border-radius: 4px;\n    padding: 20px; }\n    .chat__window .question {\n      text-align: left;\n      font-size: 20px;\n      margin: 0 0 20px; }\n      .chat__window .question p {\n        display: inline-block;\n        padding: 10px;\n        border-radius: 5px;\n        background: #BBD8F1;\n        margin: 0; }\n    .chat__window .answer {\n      text-align: right; }\n      .chat__window .answer p {\n        font-size: 20px;\n        display: inline-block;\n        padding: 10px;\n        border-radius: 5px;\n        background: #F1C0BB;\n        margin: 0; }\n    .chat__window > p {\n      font-size: 30px;\n      text-align: center;\n      color: grey;\n      margin: 0; }\n  .chat__textarea textarea {\n    margin: 0 0 20px; }\n  .chat .photo {\n    margin: 0 auto 20px;\n    text-align: center; }\n    .chat .photo img {\n      display: block;\n      margin: 0 auto;\n      max-height: 217px; }\n\n.btn {\n  font-size: 30px; }\n", ""]);
 
 	// exports
 
