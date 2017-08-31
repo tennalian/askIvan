@@ -11,7 +11,8 @@ let common = {
 	  },
     output: {
       path: path.resolve(__dirname, 'dist'),
-      filename: "./app.js",
+      filename: "app.js",
+      publicPath: './'
     },
     module: {
       rules: [
@@ -74,6 +75,7 @@ if (TARGET !== undefined && TARGET.startsWith('build')) {
 	common.entry = {
     index: ['./index.js']
   };
+  common.output.publicPath = '/';
 	common.plugins.push(new webpack.NoEmitOnErrorsPlugin());
 }
 
