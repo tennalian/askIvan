@@ -97,6 +97,21 @@ body{
 	}
 }
 
+@media screen and (max-width: 600px) {
+	.chat{
+		width: 100%;
+		margin: 50px auto;
+		padding: 0 10px;
+		min-width: 300px;
+		.chat-textarea{
+			.btn{
+			  width: 100%;
+			  font-size: 18px;
+			}
+		}
+	}
+}
+
 
 
 
