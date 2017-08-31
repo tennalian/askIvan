@@ -56,7 +56,7 @@ export class Ivan extends React.Component {
 	}
 
 	render() {
-		let image = (this.state.answerArr && !this.state.loading) ? <img src="/img/2.jpg" /> : <img src="/img/1.jpg" />;
+		let image = (this.state.answerArr && !this.state.loading) ? <img src="/ivan/dist/img/2.jpg" /> : <img src="/ivan/dist/img/1.jpg" />;
 		let answer = (this.state.answerArr && !this.state.loading) ? this.state.answerArr : <div className="loading"></div>;
 		let chat = <div className="chat-window">
 								<div className="question">
