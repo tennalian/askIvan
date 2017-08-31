@@ -75,6 +75,7 @@ if (TARGET !== undefined && TARGET.startsWith('build')) {
 	common.entry = {
     index: ['./index.js']
   };
+  common.output.publicPath = '/ivan/dist';
 	common.plugins.push(new webpack.NoEmitOnErrorsPlugin());
 }
 
